@@ -189,16 +189,6 @@
         QmCC
 </value>
   </data>
-  <data name="runOnPCToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAA1AAAANQAW/+58MAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRy
-        oQAAANZJREFUOE+lkssNgzAQRKOc00PaSBkpJHWkCdqghLQAFyQOfBcQPwsE4rIZHxLZyBGYIL3DjIdl
-        18uJmf/CaNpgNG3QRJ7nbpIkN9XbQhNCCJrnWdR17WRZdlXPfqGJvu9pWRaWDMOQlmX59DzvombWaKJt
-        W5qmiVW6rvMx2gPnZzX7QRNoncZx5DXohquqekVRdFfzEk0gRLgHNoFxtgsgRGhZtv0FRf04jveNQHia
-        pmEJiqVYqd0lYnVUFIXAF50wDO3XiJfcIAiO/0hHMJo2GM398OkNrNkdGB2+kywAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="imgListTiles.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>

@@ -92,7 +92,7 @@ namespace Level_Editor
             }
         }
 
-        public void Draw(SpriteBatch sb)
+        public virtual void Draw(SpriteBatch sb)
         {
             sb.Draw(animations[currentAnimation].Graphic, Destination, Source, defaultColor);
         }

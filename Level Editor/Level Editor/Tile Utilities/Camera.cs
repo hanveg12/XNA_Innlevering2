@@ -23,10 +23,11 @@ namespace Tile_Engine
             //Sørg for at kameraposisjonen settes innenfor de lovlige grensene
             set
             {
-                position = new Vector2(
+                /*position = new Vector2(
                     MathHelper.Clamp(value.X, worldRectangle.X, worldRectangle.Width - ViewPortWidth), 
                     MathHelper.Clamp(value.Y, worldRectangle.Y, worldRectangle.Width - ViewPortHeight)
-                    );
+                    );*/
+                position = value;
             }
         }
 

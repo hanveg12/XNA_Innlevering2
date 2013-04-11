@@ -17,6 +17,7 @@ namespace Level_Editor
     {
         private bool playerOnGround = false;
         private int jumpspeed = 0;
+        private bool facingRight = true;
 
         public PlayerSprite(Point pos, int moveSpeed, string defaultAnimation)
             : base(pos, moveSpeed, defaultAnimation)
@@ -35,6 +36,7 @@ namespace Level_Editor
                 CurrentAnimation = "runLeft";
                 NextAnimation = "idleLeft";
                 MoveLeft();
+                facingRight = false;
             }
 
             //Animasjon av spilleren mot høyre
@@ -43,6 +45,7 @@ namespace Level_Editor
                 CurrentAnimation = "runRight";
                 NextAnimation = "idleRight";
                 MoveRight();
+                facingRight = true;
             }
 
 
@@ -52,9 +55,17 @@ namespace Level_Editor
                 this.Position.Y += jumpspeed;
                 jumpspeed++;
 
-                if (this.Position.Y >= 300)
+                if (CheckMapCollision())
                 {
                     playerOnGround = true;
+                    if (facingRight)
+                    {
+                        NextAnimation = "idleRight";
+                    }
+                    else
+                    {
+                        NextAnimation = "idleLeft";
+                    }
                 }
             }
 
@@ -62,17 +73,54 @@ namespace Level_Editor
             {
                 if (input.KeyDown(Keys.Up))
                 {
+                    if (facingRight)
+                    {
+                        CurrentAnimation = "jumpRight";
+                        NextAnimation = "jumpRight";
+                    }
+
+                    else
+                    {
+                        CurrentAnimation = "jumpLeft";
+                        NextAnimation = "jumpLeft";
+                    }
                     playerOnGround = false;
-                    jumpspeed = -18;
+                    jumpspeed = -15;
                 }
             }
 
+            int screenLocation = (int)Camera.WorldToScreen(new Vector2(this.Position.X, this.Position.Y)).X;
+
+            if (screenLocation > 500)
+            {
+                Camera.Move(new Vector2(screenLocation - 500, 0));
+            }
+
+            if(screenLocation < 200)
+            {
+                Camera.Move(new Vector2(screenLocation - 200, 0));
+            }
+            
             base.Update(gt);
         }
 
-        public void Draw(SpriteBatch sb)
+        public override void Draw(SpriteBatch sb)
         {
             base.Draw(sb);
+        }
+
+        private bool CheckMapCollision()
+        {
+            Vector2 tileToCheckPosition = TileMap.GetCellByPixel(new Vector2(Position.X, Position.Y + 48));
+            //playerOnGround = false;
+
+            if (!TileMap.CellIsPassable(tileToCheckPosition))
+            {
+                playerOnGround = true;
+                return true;
+            }
+
+            return false;
         }
     }
 }

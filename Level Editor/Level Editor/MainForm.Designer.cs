@@ -49,8 +49,6 @@ namespace Level_Editor
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drawTileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.togglePassableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.runToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.runOnPCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pctSurface = new System.Windows.Forms.PictureBox();
             this.imgListTiles = new System.Windows.Forms.ImageList(this.components);
             this.listTiles = new System.Windows.Forms.ListView();
@@ -73,8 +71,7 @@ namespace Level_Editor
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.layersToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.runToolStripMenuItem});
+            this.toolsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -151,7 +148,7 @@ namespace Level_Editor
             // clearMapToolStripMenuItem
             // 
             this.clearMapToolStripMenuItem.Name = "clearMapToolStripMenuItem";
-            this.clearMapToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.clearMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clearMapToolStripMenuItem.Text = "Clear map";
             this.clearMapToolStripMenuItem.Click += new System.EventHandler(this.clearMapToolStripMenuItem_Click);
             // 
@@ -208,23 +205,6 @@ namespace Level_Editor
             this.togglePassableToolStripMenuItem.Name = "togglePassableToolStripMenuItem";
             this.togglePassableToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.togglePassableToolStripMenuItem.Text = "Toggle";
-            // 
-            // runToolStripMenuItem
-            // 
-            this.runToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.runOnPCToolStripMenuItem});
-            this.runToolStripMenuItem.Name = "runToolStripMenuItem";
-            this.runToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.runToolStripMenuItem.Text = "&Run";
-            // 
-            // runOnPCToolStripMenuItem
-            // 
-            this.runOnPCToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("runOnPCToolStripMenuItem.Image")));
-            this.runOnPCToolStripMenuItem.Name = "runOnPCToolStripMenuItem";
-            this.runOnPCToolStripMenuItem.ShortcutKeyDisplayString = "           F5";
-            this.runOnPCToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.runOnPCToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.runOnPCToolStripMenuItem.Text = "Run on PC";
             // 
             // pctSurface
             // 
@@ -376,8 +356,6 @@ namespace Level_Editor
         private ToolStripStatusLabel xbox360ControllerStateLabel;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripMenuItem editToolStripMenuItem;
-        private ToolStripMenuItem runToolStripMenuItem;
-        private ToolStripMenuItem runOnPCToolStripMenuItem;
         private ToolStripMenuItem drawTileToolStripMenuItem;
         private ToolStripMenuItem togglePassableToolStripMenuItem;
         private ToolStripMenuItem clearMapToolStripMenuItem;

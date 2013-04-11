@@ -61,9 +61,13 @@ namespace Level_Editor
             player.Animations.Add("runRight",
                 new Animation(Content.Load<Texture2D>("Textures/FRunRight"), 48, 48, 55, 8, false));
             player.Animations.Add("idleLeft",
-                new Animation(Content.Load<Texture2D>("Textures/IdleLeft"), 48, 48, 1000, 2, true));
+                new Animation(Content.Load<Texture2D>("Textures/IdleLeft"), 48, 48, 890, 2, true));
             player.Animations.Add("idleRight",
-                new Animation(Content.Load<Texture2D>("Textures/IdleRight"), 48, 48, 1000, 2, false));
+                new Animation(Content.Load<Texture2D>("Textures/IdleRight"), 48, 48, 890, 2, false));
+            player.Animations.Add("jumpLeft",
+                new Animation(Content.Load<Texture2D>("Textures/JumpLeft"), 48, 48, 110, 7, true));
+            player.Animations.Add("jumpRight",
+                new Animation(Content.Load<Texture2D>("Textures/JumpRight"), 48, 48, 110, 7, false));
             
             Audio.themeA = Content.Load<Song>("Audio/BackgroundMusic/Noise Attack");
             Audio.themeB = Content.Load<Song>("Audio/BackgroundMusic/Summon the Rawk");
